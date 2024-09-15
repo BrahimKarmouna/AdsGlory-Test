@@ -1,4 +1,4 @@
-﻿"My online postgress db alredy linked and if you want to change the database follow the steps below "
+﻿"My online postgres db alredy linked and if you want to change the database follow the steps below "
 # Project Setup
 
 ## Installation
