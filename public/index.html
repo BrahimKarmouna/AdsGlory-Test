@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Upload with Progress</title>
+    <!-- Bootstrap CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Custom styling */
+      .progress-text {
+        text-align: center;
+        margin-top: 5px;
+        font-weight: bold;
+      }
+
+      .progress-container {
+        margin-top: 15px;
+      }
+
+      .search-container {
+        margin-top: 30px;
+      }
+
+      table {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h2 class="text-center mb-4">TXT Records Search</h2>
+
+      <!-- File Upload Section -->
+      <div class="card p-4 mb-4">
+        <form id="uploadForm" enctype="multipart/form-data" class="upload-form">
+          <div class="mb-3">
+            <label for="fileInput" class="form-label">Select a TXT File</label>
+            <input
+              type="file"
+              id="fileInput"
+              name="file"
+              accept=".txt"
+              required
+              class="form-control"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Upload File</button>
+        </form>
+      </div>
+
+      <!-- Progress Section -->
+
+      <div class="card p-4 mb-4">
+        <h3 class="mb-3">TXT Record Lookup Progress</h3>
+        <div class="progress">
+          <div
+            id="lookupProgress"
+            class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+            role="progressbar"
+            style="width: 0%"
+          ></div>
+        </div>
+        <div id="lookupProgressText" class="progress-text">0%</div>
+      </div>
+
+      <!-- Search Section -->
+      <div class="search-container card p-4">
+        <h3 class="mb-3">Search TXT Records</h3>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            id="search-keyword"
+            class="form-control"
+            placeholder="Enter keyword"
+          />
+          <button id="search-btn" class="btn btn-secondary">Search</button>
+        </div>
+
+        <!-- Search Results -->
+        <div id="search-results" class="table-responsive">
+          <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+              <tr>
+                <th>Domain Name</th>
+                <th>TXT Record</th>
+              </tr>
+            </thead>
+            <tbody id="results-body">
+              <!-- Search results will be inserted here -->
+            </tbody>
+          </table>
+          <nav>
+            <ul
+              class="pagination justify-content-center"
+              id="pagination-controls"
+            >
+              <!-- Pagination controls will be inserted here -->
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,199 @@
+/* styles.css */
+
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+h2,
+h3 {
+  color: #333;
+}
+
+/* Form styling */
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input[type="file"] {
+  margin-bottom: 10px;
+}
+
+.subbutton {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.subbutton:hover {
+  background-color: #0056b3;
+}
+
+/* Progress bars */
+.progress-container {
+  margin: 20px 0;
+}
+
+/* styles.css */
+
+/* Progress Container */
+.progress-container {
+  margin: 20px 0;
+}
+
+.progress {
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  position: relative;
+  transition: width 0.4s ease-in-out;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+}
+
+#uploadProgress {
+  background-color: #007bff;
+  width: 0;
+  height: 100%;
+  border-radius: 5px;
+}
+
+#uploadProgressText {
+  margin-left: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.progress {
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  position: relative;
+  margin-top: 10px;
+}
+
+.progress::before {
+  content: "";
+  display: block;
+  height: 100%;
+  background-color: #007bff;
+  width: 0;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width 0.4s;
+}
+
+.progress-container h3 {
+  margin-bottom: 5px;
+}
+
+/* Search section styling */
+.search-container {
+  margin-top: 20px;
+}
+
+#search-keyword {
+  padding: 10px;
+  width: calc(100% - 120px);
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#search-btn {
+  padding: 10px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#search-btn:hover {
+  background-color: #218838;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.pagination-controls {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pagination-btn {
+  padding: 10px;
+  margin: 0 5px;
+
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination-btn:hover {
+  background-color: #0974e7;
+}
+.pagination-btn:active {
+  background-color: blue;
+}
+
+.pagination-btn:disabled {
+  cursor: not-allowed;
+}
